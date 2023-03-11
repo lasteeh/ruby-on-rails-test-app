@@ -30,6 +30,9 @@ gem "tailwindcss-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Add FontAwesome on Rails [https://github.com/bokmann/font-awesome-rails]
+gem "font-awesome-sass", "~> 6.3.0"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

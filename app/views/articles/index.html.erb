@@ -1,19 +1,21 @@
-<div class="w-[min(1200px,100%_-_2rem_*_2)] mx-auto rounded-2xl shadow-2xl">
-    <p class="text-xl font-semibold">Article Index</p>
-    <table>
-        <thead class="bg-neutral-200">
-            <tr>
+<div class="w-[min(1200px,100%_-_2rem_*_2)] mx-auto my-4 rounded-2xl shadow-md py-4">
+    <div class="px-4"><p class="text-xl font-semibold">Article Index</p></div>
+    <table class="block text-left">
+        <thead class="block bg-neutral-100">
+            <tr class="grid grid-cols-[10ch_1fr_2fr_1fr] px-4">
                 <th>ID</th>
                 <th>Article Name</th>
                 <th>Article Body</th>
+                <th> </th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="block">
             <% @articles.each do |article| %>
-                <tr>
+                <tr class="grid grid-cols-[10ch_1fr_2fr_1fr] px-4">
                     <td><%= article.id %></td>
                     <td><%= article.name %></td>
                     <td><%= article.body %></td>
+                    <td class="flex gap-4 items-center"><%= icon('fa-solid', 'pen-to-square') %><%= icon('fa-solid', 'trash') %><%= icon('fa-solid', 'magnifying-glass') %></td>
                 </tr>
             <% end %>
         </tbody>
