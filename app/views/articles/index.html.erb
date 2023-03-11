@@ -1,0 +1,21 @@
+<div class="w-[min(1200px,100%_-_2rem_*_2)] mx-auto rounded-2xl shadow-2xl">
+    <p class="text-xl font-semibold">Article Index</p>
+    <table>
+        <thead class="bg-neutral-200">
+            <tr>
+                <th>ID</th>
+                <th>Article Name</th>
+                <th>Article Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @articles.each do |article| %>
+                <tr>
+                    <td><%= article.id %></td>
+                    <td><%= article.name %></td>
+                    <td><%= article.body %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
