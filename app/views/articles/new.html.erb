@@ -1,0 +1,29 @@
+<div>
+    <% if @article.errors.any? %>
+        <ul>
+            <% @article.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    <% end %>
+</div>
+
+<%= form_with scope: :article, url: create_article_path, local: true do |form| %>
+
+    <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+
+    <div>
+        <%= form.label :body %>
+        <%= form.text_field :body %>
+    </div>
+
+    <div>
+        <%= form.submit 'Create Article', class: "super-button" %>
+    </div>
+
+<% end %>
+
+<%= link_to 'Cancel', articles_path, class: 'super-button' %>

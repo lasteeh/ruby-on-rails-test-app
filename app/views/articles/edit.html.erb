@@ -1,0 +1,29 @@
+<div>
+    <% if @article.errors.any? %>
+        <ul>
+            <% @article.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    <% end %>
+</div>
+
+<%= form_with scope: :article, url: update_article_path, method: :patch, local: true do |form| %>
+
+    <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+
+    <div>
+        <%= form.label :body %>
+        <%= form.text_field :body %>
+    </div>
+
+    <div>
+        <%= form.submit 'Update Article', class: "super-button" %>
+    </div>
+
+<% end %>
+
+<%= link_to 'Cancel', :back, class: 'super-button' %>

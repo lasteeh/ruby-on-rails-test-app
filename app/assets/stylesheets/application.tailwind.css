@@ -2,12 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+  .super-button {
+    @apply py-2 px-4 uppercase text-xs bg-primary-400 text-neutral-100 rounded-xl;
   }
 }
-
-*/

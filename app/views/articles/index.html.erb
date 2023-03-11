@@ -1,8 +1,8 @@
-<div class="w-[min(1200px,100%_-_2rem_*_2)] mx-auto my-4 rounded-2xl shadow-md py-4">
-    <div class="px-4"><p class="text-xl font-semibold">Article Index</p></div>
+<div class="w-[min(1200px,100%_-_2rem_*_2)] mx-auto my-4 rounded-2xl shadow-md overflow-hidden">
+    <div class="flex flex-wrap justify-between items-center px-4 py-4"><span class="text-xl font-semibold">Article Index</span><span class="super-button"><%= link_to 'Create Article', new_article_path %></span></div>
     <table class="block text-left">
         <thead class="block bg-neutral-100">
-            <tr class="grid grid-cols-[10ch_1fr_2fr_1fr] px-4">
+            <tr class="grid grid-cols-[0.5fr_1fr_2fr_1fr] px-4 py-2">
                 <th>ID</th>
                 <th>Article Name</th>
                 <th>Article Body</th>
@@ -11,11 +11,11 @@
         </thead>
         <tbody class="block">
             <% @articles.each do |article| %>
-                <tr class="grid grid-cols-[10ch_1fr_2fr_1fr] px-4">
+                <tr class="grid grid-cols-[0.5fr_1fr_2fr_1fr] px-4 py-2 border-solid border-b-[1px] border-slate-900/[0.1]">
                     <td><%= article.id %></td>
                     <td><%= article.name %></td>
                     <td><%= article.body %></td>
-                    <td class="flex gap-4 items-center"><%= icon('fa-solid', 'pen-to-square') %><%= icon('fa-solid', 'trash') %><%= icon('fa-solid', 'magnifying-glass') %></td>
+                    <td class="flex gap-4 items-center"><%= link_to icon('fa-solid', 'pen-to-square'), edit_article_path(article) %><%= button_to icon('fa-solid', 'trash'), delete_article_path(article), method: :delete %><%= link_to icon('fa-solid', 'magnifying-glass'), show_article_path(article) %></td>
                 </tr>
             <% end %>
         </tbody>
