@@ -4,6 +4,9 @@
 
 @layer components {
   .super-button {
-    @apply py-2 px-4 uppercase text-xs bg-primary-400 text-neutral-100 rounded-xl;
+    @apply py-2 px-4 uppercase text-xs bg-primary-400 hover:bg-primary-200 text-neutral-100 rounded-xl;
+  }
+  .super-link {
+    @apply text-primary-400 hover:text-primary-200;
   }
 }

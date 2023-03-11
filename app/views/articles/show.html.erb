@@ -2,5 +2,5 @@
 <p>Article Name: <%= @article.name %></P>
 <p>Article Body: <%= @article.body %></P>
 <%= link_to 'Edit article', edit_article_path, class: 'super-button' %>
-<%= button_to 'Edit article', edit_article_path, method: :delete, class: 'super-button' %>
+<%= button_to 'delete article', delete_article_path, method: :delete, class: 'super-button' %>
 <%= link_to 'Back to index', articles_path, class: 'super-button' %>

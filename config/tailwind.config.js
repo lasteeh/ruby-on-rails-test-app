@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         primary: {
+          200: "hsl(233, 74%, 70%)",
           400: "hsl(233, 74%, 59%)",
         },
       },

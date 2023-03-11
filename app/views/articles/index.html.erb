@@ -15,7 +15,7 @@
                     <td><%= article.id %></td>
                     <td><%= article.name %></td>
                     <td><%= article.body %></td>
-                    <td class="flex gap-4 items-center"><%= link_to icon('fa-solid', 'pen-to-square'), edit_article_path(article) %><%= button_to icon('fa-solid', 'trash'), delete_article_path(article), method: :delete %><%= link_to icon('fa-solid', 'magnifying-glass'), show_article_path(article) %></td>
+                    <td class="flex gap-4 items-center"><%= link_to icon('fa-solid', 'magnifying-glass'), show_article_path(article), class: "super-link" %><%= link_to icon('fa-solid', 'pen-to-square'), edit_article_path(article), class: "super-link" %><%= button_to icon('fa-solid', 'trash'), delete_article_path(article), class: "super-link", method: :delete %></td>
                 </tr>
             <% end %>
         </tbody>
